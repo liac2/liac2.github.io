@@ -11,15 +11,13 @@ $h1-font-size: 72px;
 @import '../node_modules/bootstrap/scss/_functions';
 @import '../node_modules/bootstrap/scss/_variables';
 
-// custom themes
-$custom-theme-colors: (
-    "modern": #c0591d,
-    "vintage": #1d1d1d
+// Breakpoints
+$custom-grid-breakpoints: (
+    3xl: 1850px
 );
 
-// merge themes
-$theme-colors: map-merge($custom-theme-colors, $theme-colors);
-
+// merge 
+$grid-breakpoints: map-merge($map1: $custom-grid-breakpoints, $map2: $grid-breakpoints);
 
 // import bootstrap
 @import '../node_modules/bootstrap/scss/bootstrap';
@@ -63,4 +61,7 @@ nav {
 
 
 // Termine
+.link-none {
+    text-decoration: none;
+}
 
