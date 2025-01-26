@@ -9,7 +9,7 @@ $ligth: #F8F8F6;
 $ligth-opt: #EAE5DE;
 $dark: #322A28;
 
-$bg-all: $ligth;
+$bg-all: #FFDCA9;
 $bg-even: $bg-all;
 
 $gradient-1: #FBAA21;
@@ -55,9 +55,9 @@ body {
 main > :nth-child(even){
     background-color: $bg-even !important;
 }
-// main{
-//     background-color: $bg-all;
-// }
+main{
+    background-color: $bg-all;
+}
 
 // Navbar
 .navbar-nav {
@@ -102,15 +102,48 @@ nav {
 // Hero
 .hero{
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     gap: 10px;
+    flex-direction: row;
     justify-content: center;
     padding-top: 10px;
+    background-image: url(source/wall.png);
     // padding: 0;
 }
-.hero-1{
-    width: 530px;
+.hero-title{
+    width: 480px;
     align-self: center;
+}
+.heros{
+    max-width: 1300px;
+}
+.heros-1,
+.heros-2
+{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: end;
+    align-items: flex-start;
+    gap: 1.5rem;
+}
+.heros-2{
+    align-items: flex-end;
+}
+.heros-1 > div,
+.heros-2 > div {
+    box-sizing: border-box;
+    height: auto;
+    border-radius: 8px;
+    border: 12px solid #FF9400;
+}
+.heros-1 > :nth-child(even),
+.heros-2 > :nth-child(2n-1){
+    rotate: 2deg;
+}
+.heros-1 > :nth-child(2n-1),
+.heros-2 > :nth-child(even){
+    rotate: -2deg;
 }
 // Responsive Button
 @include media-breakpoint-down(md) {
@@ -124,57 +157,26 @@ nav {
     height: auto;
     // height: 673px !important;
     // width: auto !important;
-    border-radius: 28px;
+    border-radius: 0;
 }
 
 
-// LARGE 
-@media (max-width: 1861px) {
-    .hero-2{
-        display: none;
-    }
-}
-
-// MEDIUM
-@media (max-width: 1289px) {
-    .hero-3{
-        display: none;
-    }
-    .hero-2{
-        display: block;
-    }
-}
 
 // SMALL
 @media (max-width: 1110px) {
-    .hero{
-        flex-direction: column;
-        gap: 2rem;
-        align-items: center;
-    }
-    .hero > div{
-        flex: 1;
-    }
-    .hero-1{
+    // .hero{
+    //     flex-direction: column;
+    //     gap: 2rem;
+    //     align-items: center;
+    // }
+    .hero-title{
         margin-top: 30px;
         width: 100%;
         max-width: 50rem;
         align-self: center;
     }
-    .hero-1 > a {
+    .hero-title > a {
         align-self: start;
-    }
-    .hero-2{
-        display: none;
-    }
-    // .hero-2{
-    //     width: 95%;
-    //     max-width: 523.99px;
-    //     height: auto;
-    //     align-self: center;
-    // }
-    .hero-3{
-        display: block;
     }
 }
 
