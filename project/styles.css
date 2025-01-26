@@ -10486,6 +10486,12 @@ main {
   height: auto;
   margin-right: 15px; }
 
+.logo-nav {
+  width: 90px;
+  height: auto;
+  margin-right: 15px;
+  margin-left: 1rem; }
+
 a.navbar-brand {
   font-size: 25px; }
 
@@ -10765,7 +10771,7 @@ main > :last-child {
   margin-top: 0 !important; }
 
 .logo-social {
-  width: 150px;
+  width: 200px;
   height: auto; }
 
 /*# sourceMappingURL=styles.css.map */
