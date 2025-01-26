@@ -10508,7 +10508,7 @@ nav {
   display: flex;
   flex-wrap: nowrap;
   flex-direction: row;
-  justify-content: end;
+  justify-content: center;
   padding-top: 10px; }
 
 .hero-title {
@@ -10545,6 +10545,10 @@ nav {
 .heros-2 > :nth-child(even) {
   rotate: -2deg; }
 
+@media (max-width: 1199.98px) {
+  .btn-lg, .btn-group-lg > .btn {
+    padding: .375rem .75rem;
+    font-size: 0.875rem; } }
 @media (max-width: 767.98px) {
   .btn-lg, .btn-group-lg > .btn {
     padding: .375rem .75rem;
