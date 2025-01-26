@@ -2,15 +2,19 @@
 $subtitle: 2rem;
 
 $primary: #F66C15;
-$secondary-custom: #30A091;
+$secondary: #30A091;
 $secondary-opt: #5C1C96;
 $tertiary-custom: #A5ADAB;
-$ligth: #F8F8F6;
+$ligth: #FFDA96;
 $ligth-opt: #EAE5DE;
 $dark: #322A28;
 
-$bg-all: #FFDCA9;
-$bg-even: $bg-all;
+$bg-all: #FFDA96;
+// opt: FFE4BC
+// $bg-all: #FFE3BA;
+$bg-even: #FFDFA4;
+$bg-nav: $bg-all;
+$bg-footer: $bg-all;
 
 $gradient-1: #FBAA21;
 $gradient-2: #F98822;
@@ -49,6 +53,15 @@ $theme-colors: map-merge($custom-theme-colors, $theme-colors);
 // Fonts
 body {
     font-family: 'Inter', sans-serif;
+}
+header{
+    background-color: $bg-nav;
+}
+footer{
+    background-color: $bg-footer;
+}
+html{
+    background-color: $bg-footer;
 }
 
 // Sections background 
@@ -103,11 +116,10 @@ nav {
 .hero{
     display: flex;
     flex-wrap: nowrap;
-    gap: 10px;
     flex-direction: row;
-    justify-content: center;
+    justify-content: end;
     padding-top: 10px;
-    background-image: url(source/wall.png);
+    // background-image: url(source/wall.png);
     // padding: 0;
 }
 .hero-title{
@@ -115,7 +127,7 @@ nav {
     align-self: center;
 }
 .heros{
-    max-width: 1300px;
+    max-width: 1200px;
 }
 .heros-1,
 .heros-2
@@ -395,6 +407,10 @@ a[class~="card"]:hover{
 }
 .link-none:hover {
     color: black !important;
+}
+
+.text-hover-white:hover{
+    color: white;
 }
 
 // Footer
