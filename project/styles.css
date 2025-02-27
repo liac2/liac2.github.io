@@ -10541,7 +10541,7 @@ nav {
   box-sizing: border-box;
   height: auto;
   border-radius: 8px;
-  border: 12px solid #FF9400; }
+  border: 10px solid #FF9400; }
 
 .heros-1 > :nth-child(even),
 .heros-2 > :nth-child(2n-1) {
@@ -10564,15 +10564,23 @@ nav {
   height: auto;
   border-radius: 0; }
 
-@media (max-width: 1110px) {
-  .hero-title {
-    margin-top: 30px;
-    width: 100%;
-    max-width: 50rem;
-    align-self: center; }
+@media (max-width: 1399.98px) {
+  .hero-4,
+  .hero-9 {
+    display: none; } }
+@media (max-width: 1199.98px) {
+  .hero-3,
+  .hero-8,
+  .hero-7 {
+    display: none; }
 
-  .hero-title > a {
-    align-self: start; } }
+  .heros-1 {
+    margin-bottom: 1rem; } }
+@media (max-width: 767.98px) {
+  .hero {
+    flex-direction: column;
+    max-width: 550px;
+    gap: 2rem; } }
 .wir {
   display: flex;
   justify-content: center;

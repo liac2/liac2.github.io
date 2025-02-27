@@ -100,6 +100,7 @@ main{
 }
 a.navbar-brand {
     font-size: 25px;
+    // TODO soll shrinken 
 }
 nav {
     font-size: 20px;
@@ -153,7 +154,7 @@ nav {
     box-sizing: border-box;
     height: auto;
     border-radius: 8px;
-    border: 12px solid #FF9400;
+    border: 10px solid #FF9400;
 }
 .heros-1 > :nth-child(even),
 .heros-2 > :nth-child(2n-1){
@@ -184,24 +185,32 @@ nav {
     border-radius: 0;
 }
 
-
-
-// SMALL
-@media (max-width: 1110px) {
-    // .hero{
-    //     flex-direction: column;
-    //     gap: 2rem;
-    //     align-items: center;
-    // }
-    .hero-title{
-        margin-top: 30px;
-        width: 100%;
-        max-width: 50rem;
-        align-self: center;
+// XXL
+@include media-breakpoint-down(xxl) {
+    .hero-4,
+    .hero-9{
+        display: none;
     }
-    .hero-title > a {
-        align-self: start;
+}
+// XL
+@include media-breakpoint-down(xl) {
+    .hero-3,
+    .hero-8,
+    .hero-7{
+        display: none;
     }
+    .heros-1{
+        margin-bottom: 1rem;
+    }
+}
+// LG
+@include media-breakpoint-down(md) {
+    .hero{
+        flex-direction: column;
+        max-width: 550px;
+        gap: 2rem;
+    }
+
 }
 
 // Über Uns
