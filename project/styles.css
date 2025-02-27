@@ -10458,6 +10458,11 @@ textarea.form-control-lg {
 body {
   font-family: 'Inter', sans-serif; }
 
+a.navbar-brand > strong {
+  font-family: 'Berlin Sans FB', sans-serif;
+  white-space: normal;
+  word-break: break-word; }
+
 header {
   background-color: #FFDA96; }
 
@@ -10481,6 +10486,15 @@ main {
     color: #F66C15;
     font-weight: bold; }
 
+@media (max-width: 767.98px) {
+  .logo-nav {
+    margin: 0; }
+
+  .navbar-brand {
+    margin: 0; } }
+.navbar {
+  flex-wrap: nowrap; }
+
 .logo {
   width: 80px;
   height: auto;
@@ -10489,7 +10503,7 @@ main {
 .logo-nav {
   width: 90px;
   height: auto;
-  margin-right: 15px;
+  margin-right: 1rem;
   margin-left: 1rem; }
 
 a.navbar-brand {
@@ -10579,8 +10593,17 @@ nav {
 @media (max-width: 767.98px) {
   .hero {
     flex-direction: column;
-    max-width: 550px;
-    gap: 2rem; } }
+    max-width: 650px;
+    gap: 2rem; }
+
+  .hero-title {
+    flex: 1;
+    margin: 0;
+    align-self: flex-start; }
+
+  .heros {
+    flex: 1;
+    padding: 1rem; } }
 .wir {
   display: flex;
   justify-content: center;
