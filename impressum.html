@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+      crossorigin="anonymous"
+    ></script>
+    <link href="styles.css" rel="stylesheet" />
+    <title>Los Banderos - Viva La Rock'n'Roll</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link rel="icon" type="image/png" href="source/vinyl-fill.png" />
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        document.querySelectorAll(".nav-link").forEach((link) => {
+          link.addEventListener("click", (event) => {
+            const href = link.getAttribute("href");
+
+            const offcanvasElement = document.getElementById("offcanvasNavbar");
+
+            // Prüfen, ob Offcanvas geöffnet ist
+            const isOffcanvasVisible =
+              offcanvasElement.classList.contains("show");
+
+            if (!isOffcanvasVisible) return; // Wenn nicht offen, nichts tun
+
+            // Default-Aktion verhindern (Seite springt sonst sofort zum Anchor)
+            event.preventDefault();
+
+            const offcanvas = bootstrap.Offcanvas.getInstance(offcanvasElement);
+
+            if (!offcanvas) return;
+
+            // Warten bis Offcanvas zu ist, dann scrollen
+            offcanvasElement.addEventListener(
+              "hidden.bs.offcanvas",
+              () => {
+                if (href.startsWith("#")) {
+                  const target = document.getElementById(href.substring(1));
+                  if (target) {
+                    target.scrollIntoView({ behavior: "smooth" });
+                  }
+                } else {
+                  window.location.href = href;
+                }
+              },
+              { once: true }
+            );
+
+            offcanvas.hide();
+          });
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-xl">
+        <div class="container-fluid navbar-responsive">
+          <a
+            class="navbar-brand align-items-center d-flex"
+            id="banderos"
+            href="index.html"
+          >
+            <img
+              src="source/Band.png"
+              alt="Logo"
+              class="logo-nav d-inline-block align-text-center"
+            />
+            <strong class="fw-normal fs-3">
+              Los Banderos - Viva La Rock&Roll
+            </strong>
+          </a>
+          <button
+            class="navbar-toggler focus-ring"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasNavbar"
+            aria-controls="offcanvasNavbar"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div
+            class="offcanvas offcanvas-end bg-primary-subtle"
+            tabindex="-1"
+            id="offcanvasNavbar"
+            aria-labelledby="offcanvasNavbarLabel"
+          >
+            <div class="offcanvas-header">
+              <h5
+                class="offcanvas-title align-items-center d-flex"
+                id="offcanvasNavbarLabel"
+              >
+                <img
+                  src="source/Band.png"
+                  alt="Logo"
+                  class="logo-nav d-inline-block align-text-center"
+                />
+                <strong class="fw-normal fs-3"> Los Banderos </strong>
+              </h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="offcanvas"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="offcanvas-body">
+              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                <li class="nav-item">
+                  <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#ueber-uns">Über Uns</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#termine">Termine</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#social">Social Media</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <div class="container-fluid">
+        <div class="container">
+          <h1 class="display-1 text-center">Impressum</h1>
+          <p>
+            Angaben gemäß § 5 E-Commerce-Gesetz (ECG) <br /><br />Los Banderos – Viva
+            La Rock & Roll<br />
+            Vertreten durch: Lukas Altenriederer<br />
+            Dr. Steger-Gasse 18<br />
+            3140 Pottenbrunn <br />
+            Österreich <br /><br />
+
+            Kontakt: <br />
+            E-Mail: lukas.altenriederer@hotmail.com<br /><br />
+
+            Haftungsausschluss: <br />
+            Trotz sorgfältiger inhaltlicher Kontrolle übernehmen wir keine
+            Haftung für die Inhalte externer Links. Für den Inhalt der
+            verlinkten Seiten sind ausschließlich deren Betreiber
+            verantwortlich.<br /><br />
+
+            Copyright: <br />
+            Sämtliche Inhalte (Texte, Bilder, Musik) unterliegen dem
+            Urheberrecht und dürfen nur mit schriftlicher Genehmigung verwendet
+            werden.
+          </p>
+        </div>
+      </div>
+    </main>
+
+    <footer
+      class="footer d-flex flex-wrap justify-content-between align-items-center border-1 border-dark-subtle border-top py-3 my-4"
+    >
+      <!-- Icons: Use from bootstrap -->
+      <ul class="nav col-md-2 sm-col-2 list-unstyled d-flex">
+        <li class="ms-3">
+          <a
+            class="link-body-emphasis"
+            href="https://www.facebook.com/p/Los-Banderos-Viva-La-Rock-n-Roll-61556007302974/"
+          >
+            <i class="bi icon bi-facebook"></i>
+          </a>
+        </li>
+        <li class="ms-3">
+          <a
+            class="link-body-emphasis"
+            href="https://www.youtube.com/@Los_Banderos"
+          >
+            <i class="bi icon bi-youtube"></i>
+          </a>
+        </li>
+      </ul>
+
+      <ul class="nav col-md-5 sm-col-8 justify-content-center">
+        <li class="nav-item">
+          <a href="#top" class="nav-link px-2 text-body-secondary">Home</a>
+        </li>
+        <li class="nav-item">
+          <a href="#ueber-uns" class="nav-link px-2 text-body-secondary"
+            >Über Uns</a
+          >
+        </li>
+        <li class="nav-item">
+          <a href="#termine" class="nav-link px-2 text-body-secondary"
+            >Termine</a
+          >
+        </li>
+      </ul>
+
+      <p
+        class="col-md-4 col-12 mb-0 justify-content-center text-end text-body-secondary"
+      >
+        © Copyright 2025 Los Banderos
+      </p>
+    </footer>
+  </body>
+</html>

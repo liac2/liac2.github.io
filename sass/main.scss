@@ -94,6 +94,26 @@ main{
 }
 
 // Navbar
+.navbar-responsive{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+.navbar-responsive > button{
+    margin-left: auto;
+}
+.navbar-responsive > a > img{
+    flex-shrink: 1;
+}
+@include media-breakpoint-up(sm) {
+    .navbar-responsive{
+        flex-direction: row;
+    }
+    .navbar-responsive > button{
+        margin-left: unset;
+    }
+    
+}
 .navbar-nav {
     .nav-link {
         transition: color 0.3s;
@@ -111,10 +131,10 @@ main{
 // Navbar Brand responsiveness
 @include media-breakpoint-down(md) {
     .logo-nav{
-        margin: 0;
+        margin: 0 0.5rem 0 0 !important;
     }
     .navbar-brand{
-        margin: 0;
+        margin: 0 !important;
     }
 }
 .navbar{
@@ -160,9 +180,11 @@ nav {
     justify-content: center;
     padding-top: 10px;
 }
-.hero-title{
-    width: 480px;
-    align-self: center;
+@include media-breakpoint-up(sm) {
+    .hero-title{
+        width: 480px;
+        align-self: center;
+    }
 }
 .heros{
     max-width: 1200px;
@@ -185,7 +207,13 @@ nav {
     box-sizing: border-box;
     height: auto;
     border-radius: 8px;
-    border: 10px solid #FF9400;
+    border: 7px solid #FF9400;
+}
+@include media-breakpoint-up(sm) {
+    .heros-1 > div,
+    .heros-2 > div {
+        border: 10px solid #FF9400;
+    } 
 }
 .heros-1 > :nth-child(even),
 .heros-2 > :nth-child(2n-1){
@@ -195,19 +223,19 @@ nav {
 .heros-2 > :nth-child(even){
     rotate: -2deg;
 }
-@include media-breakpoint-down(xl) {
-    .btn-lg{
-        padding: .375rem .75rem;
-        font-size: $font-size-sm;
-    }
-}
-// Responsive Button
-@include media-breakpoint-down(md) {
-    .btn-lg{
-        padding: .375rem .75rem;
-        font-size: $font-size-sm;
-    }
-}
+// @include media-breakpoint-down(xl) {
+//     .btn-lg{
+//         padding: .375rem .75rem;
+//         font-size: $font-size-sm;
+//     }
+// }
+// // Responsive Button
+// @include media-breakpoint-down(md) {
+//     .btn-lg{
+//         padding: .375rem .75rem;
+//         font-size: $font-size-sm;
+//     }
+// }
 .img-hero {
     width: 100%;
     height: auto;
