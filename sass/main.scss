@@ -164,14 +164,17 @@ nav {
 .rounded {
     border-radius: $border-radius-2xl !important;
 }
-.margin-section {
-    margin-bottom: 7rem;
-}
-@include media-breakpoint-down(sm) {
-    .margin-section {
-        margin-bottom: 3rem;
-    }
-}
+// .margin-section{
+//     padding-bottom: 7rem;
+// }
+// .margin-section {
+//     margin-bottom: 7rem;
+// }
+// @include media-breakpoint-down(sm) {
+//     .margin-section {
+//         margin-bottom: 3rem;
+//     }
+// }
 // Hero
 .hero{
     display: flex;
@@ -515,12 +518,12 @@ a[class~="card"]:hover{
 
 // Sections padding
 main > div{
-    padding-top: 1.5rem !important;
-    padding-bottom: 1.5rem !important;
+    padding-top: 3rem !important;
+    padding-bottom: 3rem !important;
 }
-main > :last-child{
-    padding-bottom: 24px;
-}
+// main > :last-child{
+//     padding-bottom: 24px;
+// }
 .footer{
     margin-top: 0 !important;
 }

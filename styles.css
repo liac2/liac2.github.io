@@ -12153,15 +12153,6 @@ nav {
   border-radius: 2rem !important;
 }
 
-.margin-section {
-  margin-bottom: 7rem;
-}
-
-@media (max-width: 575.98px) {
-  .margin-section {
-    margin-bottom: 3rem;
-  }
-}
 .hero {
   display: flex;
   flex-wrap: nowrap;
@@ -12483,12 +12474,8 @@ a[class~=card]:hover {
 }
 
 main > div {
-  padding-top: 1.5rem !important;
-  padding-bottom: 1.5rem !important;
-}
-
-main > :last-child {
-  padding-bottom: 24px;
+  padding-top: 3rem !important;
+  padding-bottom: 3rem !important;
 }
 
 .footer {
