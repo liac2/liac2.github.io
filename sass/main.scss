@@ -183,6 +183,10 @@ nav {
     justify-content: center;
     padding-top: 10px;
 }
+.hero-6{
+    transform: translate(0, -20px);
+}
+
 @include media-breakpoint-up(sm) {
     .hero-title{
         width: 480px;

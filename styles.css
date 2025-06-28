@@ -12161,6 +12161,10 @@ nav {
   padding-top: 10px;
 }
 
+.hero-6 {
+  transform: translate(0, -20px);
+}
+
 @media (min-width: 576px) {
   .hero-title {
     width: 480px;
