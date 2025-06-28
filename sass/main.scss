@@ -164,27 +164,19 @@ nav {
 .rounded {
     border-radius: $border-radius-2xl !important;
 }
-// .margin-section{
-//     padding-bottom: 7rem;
-// }
-// .margin-section {
-//     margin-bottom: 7rem;
-// }
-// @include media-breakpoint-down(sm) {
-//     .margin-section {
-//         margin-bottom: 3rem;
-//     }
-// }
 // Hero
 .hero{
     display: flex;
     flex-wrap: nowrap;
     flex-direction: row;
     justify-content: center;
-    padding-top: 10px;
+    padding-bottom: 1rem;
 }
 .hero-6{
-    transform: translate(0, -20px);
+    transform: translate(0, -15px);
+}
+.hero-4{
+    transform: translate(0, 10px);
 }
 
 @include media-breakpoint-up(sm) {
@@ -208,6 +200,7 @@ nav {
 }
 .heros-2{
     align-items: flex-end;
+    margin-top: 2rem;
 }
 .heros-1 > div,
 .heros-2 > div {
@@ -230,39 +223,20 @@ nav {
 .heros-2 > :nth-child(even){
     rotate: -2deg;
 }
-// @include media-breakpoint-down(xl) {
-//     .btn-lg{
-//         padding: .375rem .75rem;
-//         font-size: $font-size-sm;
-//     }
-// }
-// // Responsive Button
-// @include media-breakpoint-down(md) {
-//     .btn-lg{
-//         padding: .375rem .75rem;
-//         font-size: $font-size-sm;
-//     }
-// }
 .img-hero {
     width: 100%;
     height: auto;
-    // height: 673px !important;
-    // width: auto !important;
+    max-height: 215px;
     border-radius: 0;
 }
 
-// XXL
-@include media-breakpoint-down(xxl) {
-    .hero-4,
-    .hero-9{
-        display: none;
-    }
-}
 // XL
 @include media-breakpoint-down(xl) {
     .hero-3,
     .hero-8,
-    .hero-7{
+    .hero-7,
+    .hero-4,
+    .hero-9{
         display: none;
     }
     .heros-1{

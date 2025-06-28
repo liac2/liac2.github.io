@@ -12158,11 +12158,15 @@ nav {
   flex-wrap: nowrap;
   flex-direction: row;
   justify-content: center;
-  padding-top: 10px;
+  padding-bottom: 1rem;
 }
 
 .hero-6 {
-  transform: translate(0, -20px);
+  transform: translate(0, -15px);
+}
+
+.hero-4 {
+  transform: translate(0, 10px);
 }
 
 @media (min-width: 576px) {
@@ -12187,6 +12191,7 @@ nav {
 
 .heros-2 {
   align-items: flex-end;
+  margin-top: 2rem;
 }
 
 .heros-1 > div,
@@ -12216,19 +12221,16 @@ nav {
 .img-hero {
   width: 100%;
   height: auto;
+  max-height: 215px;
   border-radius: 0;
 }
 
-@media (max-width: 1399.98px) {
-  .hero-4,
-  .hero-9 {
-    display: none;
-  }
-}
 @media (max-width: 1199.98px) {
   .hero-3,
   .hero-8,
-  .hero-7 {
+  .hero-7,
+  .hero-4,
+  .hero-9 {
     display: none;
   }
   .heros-1 {
