@@ -12473,7 +12473,7 @@ a[class~=card]:hover {
   padding-right: 1rem;
 }
 
-main > div {
+main > div:nth-child(n+2) {
   padding-top: 3rem !important;
   padding-bottom: 3rem !important;
 }

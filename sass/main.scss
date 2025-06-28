@@ -517,7 +517,7 @@ a[class~="card"]:hover{
 
 
 // Sections padding
-main > div{
+main > div:nth-child(n+2){
     padding-top: 3rem !important;
     padding-bottom: 3rem !important;
 }

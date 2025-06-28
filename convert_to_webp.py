@@ -9,7 +9,7 @@ os.makedirs(output_folder, exist_ok=True)
 
 for root, dirs, files in os.walk(input_folder):
     for file in files:
-        if file.lower().endswith(".png"):
+        if file.lower().endswith(".png") or file.lower().endswith(".jpg"):
             input_path = os.path.join(root, file)
             relative_path = os.path.relpath(input_path, input_folder)
             output_path = os.path.join(output_folder, os.path.splitext(relative_path)[0] + ".webp")
